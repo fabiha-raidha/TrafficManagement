@@ -22,5 +22,6 @@
       <Button layoutX="235.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#onLogInButtonClicked" style="-fx-background-color: #E954;" text="Log In" />
       <Label layoutX="122.0" layoutY="132.0" text="Username:" />
       <Label layoutX="124.0" layoutY="205.0" text="Password:" />
+      <Label fx:id="errorMessage" layoutX="245.0" layoutY="335.0" text="Label" />
    </children>
 </AnchorPane>
