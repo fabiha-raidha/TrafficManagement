@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogIn">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E952;">
          <children>
-            <ImageView fitHeight="74.0" fitWidth="51.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="45.0" layoutY="23.0" text="Traffic Controll Management">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
+      <Label layoutX="124.0" layoutY="105.0" text="Username:" />
+      <TextField fx:id="usernameTF" layoutX="124.0" layoutY="123.0" prefHeight="25.0" prefWidth="271.0" />
+      <Label layoutX="124.0" layoutY="178.0" text="Password:" />
+      <TextField fx:id="passwordTF" layoutX="124.0" layoutY="196.0" prefHeight="25.0" prefWidth="271.0" />
+      <Button layoutX="234.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#onLogInButtonClicked" text="Log In" />
    </children>
 </AnchorPane>
