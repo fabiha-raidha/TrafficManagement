@@ -1,4 +1,4 @@
-package oop.trafficproject;
+package oop.trafficproject.GeneralFXML;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
