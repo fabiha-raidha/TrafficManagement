@@ -31,6 +31,9 @@ public abstract class User {
 
     }
 
+    public User(int employeeId, String gender, LocalDate dob) {
+    }
+
 
     public long getEmpId() {
         return empId;

@@ -5,19 +5,19 @@ import oop.trafficproject.User;
 import java.time.LocalDate;
 
 public class AdministrativeOfficerDB extends User {
-    private int employeeId;
+    private final int empId;
     private String department;
-    private LocalDate doj;
+    private final LocalDate doj;
 
-    public AdministrativeOfficerDB(String gender, LocalDate dob, String name, String email, String phone, String password, int employeeId, String department, LocalDate doj) {
-        super (employeeId, gender, dob);
-        this.employeeId = employeeId;
+    public AdministrativeOfficerDB(String gender, LocalDate dob, String name, String email, String phone, String password, int empId, String department, LocalDate doj) {
+        super (empId, gender, dob);
+        this.empId = empId;
         this.department = department;
         this.doj = doj;
     }
 
     public int getEmployeeId() {
-        return employeeId;
+        return empId;
     }
 
     public void setDepartment(String department) {
@@ -50,7 +50,7 @@ public class AdministrativeOfficerDB extends User {
     @Override
     public String toString() {
         return "AdministrativeOfficerDB{" +
-                "employeeId=" + employeeId +
+                "employeeId=" + empId +
                 ", name='" + name + '\'' +
                 ", department='" + department + '\'' +
                 ", doj=" + doj +
