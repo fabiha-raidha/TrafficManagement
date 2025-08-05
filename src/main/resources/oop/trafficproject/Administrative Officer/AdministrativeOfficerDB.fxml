@@ -13,14 +13,14 @@
          <children>
             <ImageView fitHeight="132.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../java/Images/Trafficmain.jpeg" />
+                  <Image url="@../../../../java/Images/Trafficmain.jpeg" />
                </image>
             </ImageView>
             <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;" text="Overview">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/Dashboard.png" />
+                        <Image url="@../../../../java/Images/Dashboard.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -29,7 +29,7 @@
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/icons8-user-24.png" />
+                        <Image url="@../../../../java/Images/icons8-user-24.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -38,7 +38,7 @@
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/icons8-data-backup-24.png" />
+                        <Image url="@../../../../java/Images/icons8-data-backup-24.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -47,7 +47,7 @@
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/icons8-setting-30.png" />
+                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -56,7 +56,7 @@
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/icons8-setting-30.png" />
+                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -65,7 +65,7 @@
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../java/Images/icons8-setting-30.png" />
+                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
                      </image>
                   </ImageView>
                </graphic>
