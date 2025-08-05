@@ -22,6 +22,9 @@ public class LogInController {
     private Button cancelButton;
 
 
+    public void initialize() {
+        errorMessage.setText(" ");
+    }
     @FXML
     public void onCancelButtonClicked(MouseEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
