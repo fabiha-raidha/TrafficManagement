@@ -4,12 +4,12 @@ import oop.trafficproject.User;
 
 import java.time.LocalDate;
 
-public class AdministrativeOfficerDB extends User {
+public class AdministrativeOfficer extends User {
     private final int empId;
     private String department;
     private final LocalDate doj;
 
-    public AdministrativeOfficerDB(String gender, LocalDate dob, String name, String email, String phone, String password, int empId, String department, LocalDate doj) {
+    public AdministrativeOfficer(String gender, LocalDate dob, String name, String email, String phone, String password, int empId, String department, LocalDate doj) {
         super (empId, gender, dob);
         this.empId = empId;
         this.department = department;

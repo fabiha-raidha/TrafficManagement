@@ -6,17 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2EAD3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="625.0" style="-fx-background-color: #F2EAD3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="400.0" prefWidth="161.0" style="-fx-background-color: #E3D3A3;">
+      <VBox prefHeight="429.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;">
          <children>
             <ImageView fitHeight="132.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../java/Images/Trafficmain.jpeg" />
                </image>
             </ImageView>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;" text="Overview">
+            <Button mnemonicParsing="false" onMouseClicked="#onOverviewButtonClicked" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;" text="Overview">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -25,7 +24,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;" text="User Management">
+            <Button mnemonicParsing="false" onMouseClicked="#onUserManagementButtonClicked" prefHeight="27.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="User Management">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -34,7 +33,52 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;" text="Backup &amp; Restore">
+            <Button mnemonicParsing="false" onMouseClicked="#onZoneManagementButtonClicked" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" text="Zone Management">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Images/icons8-map-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onIncidentReportButtonClicked" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="Incident Report">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Images/icons8-report-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onLeaveTerminationButtonClicked" prefHeight="23.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="Leave/ Termination">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Images/icons8-application-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onLogisticsButtonClicked" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="Logistics">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Images/icons8-procurement-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onFeedbackButtonClicked" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" text="Feedback">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Images/icons8-feedback-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onBackupButtonClicked" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="Backup &amp; Restore">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -43,29 +87,14 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #E3D3A3;">
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" />
+            <Button fx:id="signOutButton" mnemonicParsing="false" onMouseClicked="#onSignOutButtonClicked" prefHeight="16.0" prefWidth="174.0" style="-fx-background-color: #E3D3A3;" text="Sign Out">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" text="Settings">
-               <graphic>
-                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #E3D3A3;" text="Settings">
-               <graphic>
-                  <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../java/Images/icons8-setting-30.png" />
+                        <Image url="@../../../../java/Images/icons8-logout-48.png" />
                      </image>
                   </ImageView>
                </graphic>

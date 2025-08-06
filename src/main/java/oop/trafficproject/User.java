@@ -28,7 +28,6 @@ public abstract class User {
         this.designation = designation;
         this.password = password;
         this.assignedZone= assignedZone;
-
     }
 
     public User(int employeeId, String gender, LocalDate dob) {
