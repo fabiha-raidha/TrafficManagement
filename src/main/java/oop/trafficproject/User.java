@@ -1,8 +1,11 @@
 package oop.trafficproject;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public abstract class User {
+public abstract class User implements Serializable{
+    private static final long   serialVersionUID = 1L;
+
     protected final int empId;
     protected String name, address, email, phone;
     protected final String gender;
@@ -10,14 +13,10 @@ public abstract class User {
     protected String designation;
     protected String password;
     private String assignedZone;
+    private String department;
+    private String status;
 
-    public User() {
-        this.empId = 0;
-        gender = "TBA";
-        dob = null;
-    }
-
-    public User(int empId, String name, String address, String email, String phone, String gender, LocalDate dob, String designation, String password, String assignedZone) {
+    public User(int empId, String department, String name, String address, String email, String phone, String gender, LocalDate dob, String designation, String password, String assignedZone, String status) {
         this.empId = empId;
         this.name = name;
         this.address = address;
@@ -28,13 +27,41 @@ public abstract class User {
         this.designation = designation;
         this.password = password;
         this.assignedZone= assignedZone;
+        this.department = department;
+        this.status = status;
     }
 
-    public User(int employeeId, String gender, LocalDate dob) {
+    public User(int empId, String gender, LocalDate dob, int empId1, String gender1, LocalDate dob1) {
+        this.empId = empId1;
+        this.gender = gender1;
+        this.dob = dob1;
+    }
+
+    public User(int empId, String gender, LocalDate dob) {
+        this.empId = 0;
+        this.gender = "TBA";
+        this.dob = null;
+        status = "Active";
     }
 
 
-    public long getEmpId() {
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getEmpId() {
         return empId;
     }
 
@@ -104,4 +131,6 @@ public abstract class User {
     public String getAssignedZone(){
         return assignedZone;
     }
+
+
 }
