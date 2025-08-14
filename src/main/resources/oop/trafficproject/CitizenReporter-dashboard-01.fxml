@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.CitizenReporterDashboard01Controller">
+    <children>
+        <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+            <children>
+                <Button layoutX="47.0" layoutY="111.0" mnemonicParsing="false" onAction="#ReportAnissueOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Report an Issue" wrapText="true">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="47.0" layoutY="169.0" mnemonicParsing="false" onAction="#TrackReportOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Track Report">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="47.0" layoutY="227.0" mnemonicParsing="false" onAction="#GiveaFeedbackOnAction" prefHeight="37.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Give a Feedback">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="47.0" layoutY="286.0" mnemonicParsing="false" onAction="#FeedbackHistoryOnAction" prefHeight="37.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text=" Feedback History">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="336.0" layoutY="111.0" mnemonicParsing="false" onAction="#MyReportsOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="My Reports">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="335.0" layoutY="169.0" mnemonicParsing="false" onAction="#LocalUpdatesOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Local Updates">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="335.0" layoutY="227.0" mnemonicParsing="false" onAction="#EditOrCancelAReportOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Edit or Cancel a Report">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="17.0" />
+                    </font>
+                </Button>
+                <Button layoutX="335.0" layoutY="286.0" mnemonicParsing="false" onAction="#MarkHazardOnAction" prefHeight="35.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Mark Hazard">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="15.0" />
+                    </font>
+                </Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbb002e" height="23.0" layoutX="253.0" layoutY="354.0" stroke="BLACK" strokeType="INSIDE" width="302.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbb002e" height="23.0" layoutX="78.0" layoutY="354.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+                <Label layoutX="257.0" layoutY="349.0" prefHeight="33.0" prefWidth="66.0" text="Name" textFill="WHITE">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="82.0" layoutY="354.0" prefHeight="17.0" prefWidth="36.0" text="ID" textFill="WHITE">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="idShowLabelFXID" alignment="CENTER" layoutX="100.0" layoutY="353.0" prefHeight="17.0" prefWidth="108.0" textAlignment="CENTER" textFill="#ffc300">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="nameShowLabelFXID" alignment="CENTER" layoutX="310.0" layoutY="354.0" prefHeight="23.0" prefWidth="241.0" textAlignment="CENTER" textFill="#ffc300">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="#eeff14" layoutX="80.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citizen Reporter Dashboard" textAlignment="CENTER" wrappingWidth="440.1416015625">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="24.0" />
+                    </font>
+                </Text>
+                <Text fill="#d0b400" layoutX="249.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press any button to begin." wrappingWidth="133.0">
+                    <font>
+                        <Font name="Baloo Bhaijaan Regular" size="11.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc00073" height="15.0" layoutX="237.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
