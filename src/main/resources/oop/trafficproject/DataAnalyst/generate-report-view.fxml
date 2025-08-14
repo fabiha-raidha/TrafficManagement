@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.GenerateReportController"
+            prefWidth="1200" prefHeight="780"
+            style="-fx-background-color: linear-gradient(to bottom right,#f5f7fa,#d6e4f5);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#34495e,#3498db); -fx-padding:10;">
+            <Label text="Custom Data Reports" style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ComboBox fx:id="reportTypeCombo" promptText="Report Type" prefWidth="220"/>
+                <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                <ComboBox fx:id="zoneCombo" promptText="Zone"/>
+                <Button text="Generate" fx:id="generateBtn"
+                        style="-fx-background-color:#2ecc71; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <TableView fx:id="reportTable" prefHeight="560"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <columns>
+                    <TableColumn text="Incident Type" prefWidth="240"/>
+                    <TableColumn text="Count" prefWidth="120"/>
+                    <TableColumn text="Zone" prefWidth="160"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Export as CSV" fx:id="exportCSVBtn" style="-fx-background-color:#e74c3c; -fx-text-fill:white;"/>
+                <Button text="Export as PDF" fx:id="exportPDFBtn" style="-fx-background-color:#e74c3c; -fx-text-fill:white;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

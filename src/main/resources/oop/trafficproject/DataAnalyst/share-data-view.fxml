@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.ShareDataController"
+            prefWidth="900" prefHeight="640"
+            style="-fx-background-color: linear-gradient(to bottom right,#f8bbd0,#f48fb1);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#c2185b,#e91e63); -fx-padding:10;">
+            <Label text="Share Data Insights" style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <StackPane style="-fx-padding:16;">
+            <VBox spacing="12" maxWidth="700"
+                  style="-fx-background-color:white; -fx-background-radius:16; -fx-padding:16; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.16), 18, 0, 0, 6);">
+                <Button text="Open Share Modal" fx:id="openShareModalBtn"
+                        style="-fx-background-color:#e91e63; -fx-text-fill:white; -fx-background-radius:10; -fx-padding:8 16;"/>
+                <Label text="Recipients" style="-fx-font-weight:bold; -fx-text-fill:#c2185b;"/>
+                <TextField fx:id="recipientsField" promptText="user1@city.gov, user2@city.gov"/>
+                <Label text="Message" style="-fx-font-weight:bold; -fx-text-fill:#c2185b;"/>
+                <TextArea fx:id="messageArea" promptText="Enter your message…" prefRowCount="6"/>
+                <HBox alignment="CENTER_RIGHT">
+                    <Button text="Send" fx:id="sendBtn" style="-fx-background-color:#c2185b; -fx-text-fill:white; -fx-background-radius:10;"/>
+                </HBox>
+                <Label fx:id="statusText" textFill="#6a1b9a"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

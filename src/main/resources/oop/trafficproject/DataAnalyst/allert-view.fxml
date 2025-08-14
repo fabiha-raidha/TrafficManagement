@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.AllertController"
+            prefWidth="1100" prefHeight="760"
+            style="-fx-background-color: linear-gradient(to bottom right,#ffebee,#ef9a9a);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#d32f2f,#f44336); -fx-padding:10;">
+            <Label text="Anomaly Alert Settings" style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ComboBox fx:id="conditionCombo" promptText="Condition" prefWidth="220"/>
+                <TextField fx:id="valueField" promptText="Value (e.g., 10)"/>
+                <ComboBox fx:id="zoneCombo" promptText="Zone" prefWidth="220"/>
+                <Button text="Save" fx:id="saveAlertRuleBtn"
+                        style="-fx-background-color:#f44336; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <Label text="Recent Alerts" style="-fx-font-size:16px; -fx-font-weight:bold; -fx-text-fill:#d32f2f;"/>
+            <TableView fx:id="alertTable" prefHeight="560"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <columns>
+                    <TableColumn text="Alert" prefWidth="420"/>
+                    <TableColumn text="Date" prefWidth="180"/>
+                    <TableColumn text="Zone" prefWidth="180"/>
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER_RIGHT">
+                <Button text="View Details" fx:id="viewDetailsBtn"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

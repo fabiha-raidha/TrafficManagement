@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.RoadClosuresController"
+            prefWidth="1200" prefHeight="780"
+            style="-fx-background-color: linear-gradient(to bottom right,#fffde7,#fff59d);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#f9a825,#fdd835); -fx-padding:10;">
+            <Label text="Manage Road Closures"
+                   style="-fx-text-fill:#2d2d2d; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <BorderPane style="-fx-padding:14;">
+            <left>
+                <VBox spacing="10" prefWidth="360"
+                      style="-fx-background-color:white; -fx-background-radius:12; -fx-padding:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                    <TextField fx:id="searchField" promptText="Search location (e.g., Main St.)"/>
+                    <ComboBox fx:id="reasonCombo" promptText="Reason"/>
+                    <DatePicker fx:id="startDate" promptText="Start Date"/>
+                    <DatePicker fx:id="endDate" promptText="End Date"/>
+                    <HBox spacing="8">
+                        <Button text="Submit" fx:id="submitBtn" style="-fx-background-color:#f9a825; -fx-text-fill:#2d2d2d;"/>
+                        <Button text="Clear" fx:id="clearBtn"/>
+                    </HBox>
+                    <Label fx:id="statusText" textFill="#6d4c41"/>
+                </VBox>
+            </left>
+
+            <center>
+                <StackPane fx:id="mapContainer"
+                           style="-fx-background-color:#fffde7; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                    <Label text="Map — click to choose closure point" textFill="#616161"/>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
