@@ -1,6 +1,7 @@
 module oop.trafficproject {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.logging;
 
 
     opens oop.trafficproject to javafx.fxml;
