@@ -39,11 +39,15 @@ public class RoadMaintenanceOfficerDashboard01Controller
     public void CitizenFeedbackOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void MaintenanceDashBoardOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void UpdateStatusOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void CheckMaintenanceTaskListOnAction(ActionEvent actionEvent) {
     }
 }
