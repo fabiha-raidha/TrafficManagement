@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.AssignFieldUnitController"
+            prefWidth="1200" prefHeight="700"
+            style="-fx-background-color: linear-gradient(to bottom right,#e8f5e9,#c8e6c9);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#2e7d32,#43a047); -fx-padding:10;">
+            <Label text="Incidents — Assign Units"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search incidents…" prefWidth="240"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="14" style="-fx-padding:16;">
+            <TableView fx:id="incidentTable" prefHeight="620"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-padding:6; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <columns>
+                    <TableColumn fx:id="colId" text="Incident ID" prefWidth="120"/>
+                    <TableColumn fx:id="colLocation" text="Location" prefWidth="240"/>
+                    <TableColumn fx:id="colType" text="Type" prefWidth="160"/>
+                    <TableColumn fx:id="colSeverity" text="Severity" prefWidth="120"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+                    <TableColumn fx:id="colAssign" text="Assign Unit" prefWidth="160"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Refresh" fx:id="refreshBtn"
+                        style="-fx-background-color:#2e7d32; -fx-text-fill:white; -fx-background-radius:10; -fx-padding:6 14;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.AnalyseIncidentController"
+            prefWidth="1200" prefHeight="780"
+            style="-fx-background-color: linear-gradient(to bottom right,#e0f7fa,#b2ebf2);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#006064,#00acc1); -fx-padding:10;">
+            <Label text="Incident Trends"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                <ComboBox fx:id="incidentTypeCombo" promptText="Incident Type"/>
+                <ComboBox fx:id="zoneCombo" promptText="Zone"/>
+                <Button text="Apply" fx:id="applyBtn"
+                        style="-fx-background-color:#00acc1; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <LineChart fx:id="trendChart" prefHeight="600">
+                <xAxis>
+                    <CategoryAxis label="Date"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Incidents"/>
+                </yAxis>
+            </LineChart>
+        </VBox>
+    </center>
+</BorderPane>

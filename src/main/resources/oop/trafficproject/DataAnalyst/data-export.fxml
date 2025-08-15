@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.DataExportController"
+            prefWidth="1200" prefHeight="760"
+            style="-fx-background-color: linear-gradient(to bottom right,#eceff1,#cfd8dc);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#455a64,#607d8b); -fx-padding:10;">
+            <Label text="Data Export" style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="18" alignment="CENTER_LEFT">
+                <VBox spacing="6">
+                    <Label text="Categories" style="-fx-font-weight:bold;"/>
+                    <CheckBox fx:id="incidentsCheck" text="Incidents"/>
+                    <CheckBox fx:id="patrolLogsCheck" text="Patrol Logs"/>
+                    <CheckBox fx:id="cameraMetadataCheck" text="Camera Metadata"/>
+                </VBox>
+                <VBox spacing="10">
+                    <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                    <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                    <ComboBox fx:id="zoneCombo" promptText="Zone" prefWidth="220"/>
+                </VBox>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button text="Export" fx:id="exportBtn"
+                        style="-fx-background-color:#607d8b; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <TableView fx:id="exportTable" prefHeight="540"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <columns>
+                    <TableColumn text="Incident ID" prefWidth="160"/>
+                    <TableColumn text="Type" prefWidth="180"/>
+                    <TableColumn text="Date" prefWidth="180"/>
+                    <TableColumn text="Zone" prefWidth="180"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

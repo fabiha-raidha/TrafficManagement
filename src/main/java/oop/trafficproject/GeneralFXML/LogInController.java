@@ -1,9 +1,11 @@
-package oop.trafficproject;
+package oop.trafficproject.GeneralFXML;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class LogInController {
 
@@ -15,6 +17,20 @@ public class LogInController {
 
     @FXML
     private TextField usernameTF;
+
+    @FXML
+    private Button cancelButton;
+
+
+    public void initialize() {
+        errorMessage.setText(" ");
+    }
+    @FXML
+    public void onCancelButtonClicked(MouseEvent event) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
+
+    }
 
     @FXML
     void onLogInButtonClicked(MouseEvent event) {

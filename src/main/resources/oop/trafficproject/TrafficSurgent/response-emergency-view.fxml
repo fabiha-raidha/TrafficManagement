@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.ResponseEmergencyController"
+            prefWidth="1100" prefHeight="720"
+            style="-fx-background-color: linear-gradient(to bottom right,#ffebee,#ffcdd2);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#c62828,#e53935); -fx-padding:10;">
+            <Label text="Emergency Notifications"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:14;">
+            <TitledPane text="Active Alerts" expanded="true"
+                        style="-fx-background-radius:12; -fx-padding:6;">
+                <content>
+                    <ListView fx:id="alertList" prefHeight="240"/>
+                </content>
+            </TitledPane>
+
+            <TitledPane text="Alert Details" expanded="true">
+                <content>
+                    <GridPane hgap="12" vgap="10" style="-fx-padding:10;">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="30"/>
+                            <ColumnConstraints percentWidth="70"/>
+                        </columnConstraints>
+                        <Label text="Location:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="detailLocation" editable="false" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Type:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="detailType" editable="false" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <Label text="Severity:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="detailSeverity" editable="false" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                        <Label text="Recommended Action:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="detailAction" editable="false" prefRowCount="3" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                        <Label text="Assign Unit:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="unitCombo" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="Select Unit"/>
+                    </GridPane>
+                </content>
+            </TitledPane>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Acknowledge &amp; Take Action" fx:id="ackActionBtn"
+                        style="-fx-background-color:#c62828; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+            <Label fx:id="statusText" textFill="#6d4c41"/> <!-- Ensure this is present -->
+        </VBox>
+    </center>
+</BorderPane>

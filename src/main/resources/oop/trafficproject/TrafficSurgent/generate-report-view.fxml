@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.GenerateReportController"
+            prefWidth="1100" prefHeight="760"
+            style="-fx-background-color: linear-gradient(to bottom right,#f3e5f5,#e1bee7);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#6a1b9a,#8e24aa); -fx-padding:10;">
+            <Label text="Shift Summary Report"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:14;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <DatePicker fx:id="startDate" promptText="Start Date"/>
+                <DatePicker fx:id="endDate" promptText="End Date"/>
+                <Button text="Generate" fx:id="generateBtn"
+                        style="-fx-background-color:#6a1b9a; -fx-text-fill:white; -fx-background-radius:10;"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button text="Download PDF" fx:id="downloadPdfBtn"/>
+            </HBox>
+
+            <TableView fx:id="reportTable" prefHeight="600"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <columns>
+                    <TableColumn text="Incident Type" fx:id="colType" prefWidth="220"/>
+                    <TableColumn text="Count" fx:id="colCount" prefWidth="120"/>
+                    <TableColumn text="Date" fx:id="colDate" prefWidth="160"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="statusText" textFill="#37474f"/> <!-- Ensure this is present -->
+        </VBox>
+    </center>
+</BorderPane>

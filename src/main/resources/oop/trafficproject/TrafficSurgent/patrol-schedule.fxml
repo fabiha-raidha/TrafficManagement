@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.PatrolScheduleController"
+            prefWidth="1200" prefHeight="800"
+            style="-fx-background-color: linear-gradient(to bottom right,#f1f8e9,#dcedc8);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#7cb342,#8bc34a); -fx-padding:10;">
+            <Label text="Patrol Schedule"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ToggleButton text="Calendar" fx:id="calendarViewBtn" selected="true"/>
+            <ToggleButton text="Table" fx:id="tableViewBtn"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <BorderPane style="-fx-padding:14;">
+            <top>
+                <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding:8;">
+                    <DatePicker fx:id="startDate" promptText="Start Date"/>
+                    <DatePicker fx:id="endDate" promptText="End Date"/>
+                    <ComboBox fx:id="routeCombo" promptText="Route"/>
+                    <ComboBox fx:id="officerCombo" promptText="Officer"/>
+                    <Button text="Filter" fx:id="filterBtn"
+                            style="-fx-background-color:#7cb342; -fx-text-fill:white; -fx-background-radius:10;"/>
+                </HBox>
+            </top>
+
+            <center>
+                <StackPane>
+                    <StackPane fx:id="calendarContainer"
+                               style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                        <Label text="Calendar View Placeholder" textFill="#607d8b"/>
+                    </StackPane>
+                    <TableView fx:id="patrolTable" visible="false">
+                        <columns>
+                            <TableColumn text="Date" fx:id="colDate" prefWidth="200"/>
+                            <TableColumn text="Route" fx:id="colRoute" prefWidth="200"/>
+                            <TableColumn text="Officer" fx:id="colOfficer" prefWidth="200"/>
+                        </columns>
+                    </TableView>
+                </StackPane>
+            </center>
+
+            <bottom>
+                <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding:8;">
+                    <Button text="Add Patrol" fx:id="addBtn"/>
+                    <Button text="Edit Selected" fx:id="editBtn"/>
+                </HBox>
+                <Label fx:id="statusText" textFill="#607d8b" style="-fx-padding:8;"/> <!-- Added statusText -->
+            </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>

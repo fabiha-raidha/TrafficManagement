@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.LogInController">
+<AnchorPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.GeneralFXML.LogInController">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #E952;">
          <children>
@@ -19,9 +19,10 @@
       </AnchorPane>
       <TextField fx:id="usernameTF" layoutX="123.0" layoutY="150.0" prefHeight="25.0" prefWidth="271.0" />
       <TextField fx:id="passwordTF" layoutX="124.0" layoutY="223.0" prefHeight="25.0" prefWidth="271.0" />
-      <Button layoutX="235.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#onLogInButtonClicked" style="-fx-background-color: #E954;" text="Log In" />
+      <Button layoutX="235.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#onLogInButtonClicked" style="-fx-background-color: #E954;" text="Log In" />
       <Label layoutX="122.0" layoutY="132.0" text="Username:" />
       <Label layoutX="124.0" layoutY="205.0" text="Password:" />
-      <Label fx:id="errorMessage" layoutX="245.0" layoutY="335.0" text="Label" />
+      <Label fx:id="errorMessage" layoutX="170.0" layoutY="341.0" text="LogI in is invalid! Please try again." />
+      <Button fx:id="cancelButton" layoutX="234.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#onCancelButtonClicked" style="-fx-background-color: #E954;" text="Cancel" />
    </children>
 </AnchorPane>

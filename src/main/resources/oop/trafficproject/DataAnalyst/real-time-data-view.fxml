@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.RealTimeDataController"
+            prefWidth="1200" prefHeight="760"
+            style="-fx-background-color: linear-gradient(to bottom right,#f0f4f8,#c8e6c9);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#1abc9c,#16a085); -fx-padding:10;">
+            <Label text="Real-Time Data" style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ComboBox fx:id="dataStreamCombo" promptText="Data Stream" prefWidth="220"/>
+                <ComboBox fx:id="zoneCombo" promptText="Zone" prefWidth="220"/>
+                <TextField fx:id="thresholdField" promptText="Threshold (e.g., Congestion > 80%)" prefWidth="280"/>
+                <Button text="Save" fx:id="saveThresholdBtn" style="-fx-background-color:#16a085; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <StackPane fx:id="metricsPane" prefHeight="560"
+                       style="-fx-background-color:white; -fx-background-radius:12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.12), 16, 0, 0, 4);">
+                <Label text="Live metrics will appear here" textFill="#607d8b"/>
+            </StackPane>
+        </VBox>
+    </center>
+</BorderPane>
