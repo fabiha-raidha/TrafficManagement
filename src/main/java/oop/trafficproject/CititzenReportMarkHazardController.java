@@ -4,37 +4,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CitizenReportsEditOrCancelController
+public class CititzenReportMarkHazardController
 {
     @javafx.fxml.FXML
-    private TableColumn tagCol_fxid;
+    private TextArea markHazardMess_Label_fxid;
     @javafx.fxml.FXML
-    private TableView editOrCancelTabileView_fxid;
-    @javafx.fxml.FXML
-    private TableColumn reportStatusCol_fxid;
-    @javafx.fxml.FXML
-    private TableColumn reportIDCol_fxid;
+    private ComboBox locationComboBox_fxid;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void Edit_report_OnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void Cancel_report_OnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void BackToDashboardOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void Submit_markHazard_OnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

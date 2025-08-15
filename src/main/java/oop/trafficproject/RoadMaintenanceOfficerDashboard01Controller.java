@@ -1,7 +1,13 @@
 package oop.trafficproject;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 // oop.trafficproject.CitizenReporterDashboard01Controller //
 public class RoadMaintenanceOfficerDashboard01Controller
@@ -16,7 +22,12 @@ public class RoadMaintenanceOfficerDashboard01Controller
     }
 
     @javafx.fxml.FXML
-    public void AssignToCrewOnAction(ActionEvent actionEvent) {
+    public void AssignToCrewOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMaintenanceOfficer-AssignToCrew.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -48,6 +59,20 @@ public class RoadMaintenanceOfficerDashboard01Controller
     }
 
     @javafx.fxml.FXML
-    public void CheckMaintenanceTaskListOnAction(ActionEvent actionEvent) {
+    public void CheckMaintenanceTaskListOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMaintenanceOfficer-CheckMaintenanceTaskList.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void BackToAltLoginDashBoardOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AlterNativeLogin.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

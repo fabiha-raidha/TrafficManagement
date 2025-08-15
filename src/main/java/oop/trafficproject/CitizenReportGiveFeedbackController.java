@@ -4,37 +4,39 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CitizenReportsEditOrCancelController
+public class CitizenReportGiveFeedbackController
 {
     @javafx.fxml.FXML
     private TableColumn tagCol_fxid;
     @javafx.fxml.FXML
-    private TableView editOrCancelTabileView_fxid;
+    private TableView giveFeedBackTableView_fxid;
     @javafx.fxml.FXML
-    private TableColumn reportStatusCol_fxid;
+    private TableColumn reportStatus_fxid;
+    @javafx.fxml.FXML
+    private ComboBox feedBackTypeComboBox_fxid;
     @javafx.fxml.FXML
     private TableColumn reportIDCol_fxid;
+    @javafx.fxml.FXML
+    private TextField feedbackMessage_Lable_fxid;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void Edit_report_OnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void Cancel_report_OnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void BackToDashboardOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void Feedback_OnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

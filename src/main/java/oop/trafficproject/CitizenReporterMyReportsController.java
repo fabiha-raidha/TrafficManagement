@@ -6,35 +6,38 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CitizenReportsEditOrCancelController
+public class CitizenReporterMyReportsController
 {
     @javafx.fxml.FXML
-    private TableColumn tagCol_fxid;
+    private TableColumn reportIdCol_fxid;
     @javafx.fxml.FXML
-    private TableView editOrCancelTabileView_fxid;
+    private TableColumn submissionDateCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn reportStatusCol_fxid;
+    private TextArea myreportMessegeTextAreaFXID;
     @javafx.fxml.FXML
-    private TableColumn reportIDCol_fxid;
+    private TableColumn typeCol_fxid;
+    @javafx.fxml.FXML
+    private TableColumn locationCol_fxid;
+    @javafx.fxml.FXML
+    private TableView myReportTableView_fxid;
+    @javafx.fxml.FXML
+    private TableColumn currentstatusCol_fxid;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void Edit_report_OnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void Cancel_report_OnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void BackToDashboardOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void View_report_OnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

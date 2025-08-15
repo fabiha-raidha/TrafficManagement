@@ -10,27 +10,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CitizenReportsEditOrCancelController
+public class CitizenReporterTrackReportController
 {
     @javafx.fxml.FXML
     private TableColumn tagCol_fxid;
     @javafx.fxml.FXML
-    private TableView editOrCancelTabileView_fxid;
+    private TableColumn reportIdCol_fxid;
     @javafx.fxml.FXML
     private TableColumn reportStatusCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn reportIDCol_fxid;
+    private TableView trackReportsTableView_fxid;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void Edit_report_OnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void Cancel_report_OnAction(ActionEvent actionEvent) {
     }
 
     @Deprecated
