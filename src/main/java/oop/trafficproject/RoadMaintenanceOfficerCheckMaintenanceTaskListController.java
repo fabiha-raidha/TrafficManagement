@@ -36,6 +36,7 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
 
     @javafx.fxml.FXML
     public void initialize() {
+        checkTaskListTabileView_fxid.getItems().clear();
         // String reportID, String status, String reportType, String location,
         // String citizenID, String message, LocalDate publicDate
         messageCol_fxid.setCellValueFactory(new PropertyValueFactory<>("message"));
@@ -52,7 +53,7 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
             fis = new FileInputStream("reports.bin");
             ois =new ObjectInputStream(fis);
             try {
-                checkTaskListTabileView_fxid.getItems().clear();
+
                 while (true){
                     Report report1 = (Report)ois.readObject();
                     //if (report1.getStatus().equals(comboboxfxid.getValue))

@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="454.0" prefWidth="632.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.CitizenReporterMyReportsController">
     <children>
-        <Button layoutX="39.0" layoutY="347.0" mnemonicParsing="false" onAction="#View_report_OnAction" prefHeight="26.0" prefWidth="578.0" style="-fx-background-color: #5de189;" text="view" wrapText="true">
+        <Button layoutX="39.0" layoutY="347.0" mnemonicParsing="false" onAction="#View_report_OnAction" prefHeight="26.0" prefWidth="258.0" style="-fx-background-color: #5de189;" text="view" wrapText="true">
             <font>
                 <Font name="Baloo Bhaijaan Regular" size="11.0" />
             </font>
@@ -29,11 +29,21 @@
                 <TableColumn fx:id="currentstatusCol_fxid" prefWidth="160.0" text="Current Status" />
             </columns>
         </TableView>
-        <TextArea fx:id="myreportMessegeTextAreaFXID" layoutX="39.0" layoutY="267.0" prefHeight="63.0" prefWidth="578.0" />
+        <TextArea fx:id="myreportMessegeTextAreaFXID" layoutX="213.0" layoutY="278.0" prefHeight="38.0" prefWidth="400.0" />
       <Button layoutX="446.0" layoutY="396.0" mnemonicParsing="false" onAction="#BackToCitizenDashboardOnAction" prefHeight="26.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="Back To Citizen DashBoard" wrapText="true">
          <font>
             <Font name="Baloo Bhaijaan Regular" size="11.0" />
          </font>
       </Button>
+      <Button layoutX="373.0" layoutY="347.0" mnemonicParsing="false" onAction="#Refresh_OnAction" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" text="Refresh" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="11.0" />
+         </font>
+      </Button>
+      <Text fill="#f5d516" layoutX="39.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search With Report ID" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>

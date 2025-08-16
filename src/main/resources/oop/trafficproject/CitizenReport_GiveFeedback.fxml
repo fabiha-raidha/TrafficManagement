@@ -26,8 +26,8 @@
         <TableView fx:id="giveFeedBackTableView_fxid" layoutX="19.0" layoutY="98.0" prefHeight="136.0" prefWidth="577.0">
             <columns>
                 <TableColumn fx:id="reportIDCol_fxid" prefWidth="233.0" text="Report ID" />
-                <TableColumn fx:id="reportStatus_fxid" prefWidth="121.0" text="Report status" />
-                <TableColumn fx:id="tagCol_fxid" prefWidth="222.0" text="Tag" />
+                <TableColumn fx:id="reportStatusCol_fxid" prefWidth="121.0" text="Report status" />
+                <TableColumn fx:id="messageCol_fxid" prefWidth="222.0" text="Message" />
             </columns>
         </TableView>
         <Button layoutX="20.0" layoutY="348.0" mnemonicParsing="false" onAction="#Feedback_OnAction" prefHeight="26.0" prefWidth="578.0" style="-fx-background-color: #5de189;" text="FEEDBACK" wrapText="true">

@@ -26,8 +26,8 @@ public class CitizenReporterReportanIssueController
     @javafx.fxml.FXML
     public void initialize() {
 
-        locationSelectComboBox.getItems().addAll("Dhaka","Budda","GulShan");
-        problemSelectComboBox.getItems().addAll("Broken Road", "PatHole", "Road Light Fused");
+        locationSelectComboBox.getItems().addAll("Gulshan", "Banani", "Uttara", "Mirpur", "Mohakhali", "Farmgate", "Bashundhara", "Tejgaon", "Shahbagh", "Badda");
+        problemSelectComboBox.getItems().addAll("Road Damage / Potholes", "Street Light Not Working", "Illegal Parking", "Public Transport Shortage", "Accident Spot Reporting", "Illegal Construction", "Tree Obstruction", "Broken Footpath");
 
 
     }
