@@ -113,6 +113,9 @@ public abstract class User implements Serializable{
         this.designation = designation;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
     public boolean changePassword(String oldPassword, String newPassword, String confirmPassword) {
         if (this.password.equals(oldPassword) && newPassword.equals(confirmPassword)) {

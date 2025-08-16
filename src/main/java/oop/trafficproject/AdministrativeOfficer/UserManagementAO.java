@@ -68,7 +68,7 @@ public class UserManagementAO {
     private ObservableList<User> masterUserList = FXCollections.observableArrayList();
     private FilteredList<User> filteredData;
 
-    private final String DATA_FILE_PATH = "data/users.bin";
+    private final String DATA_FILE_PATH = "data/user.bin";
 
     @FXML
     public void initialize() {

@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +20,9 @@ public class AdministrativeOfficerController {
 
     @FXML
     private Button logOutButton;
+
+    @FXML
+    private AnchorPane contentArea;
 
     @FXML
     void onBackupButtonClicked(MouseEvent event) {
@@ -71,7 +76,10 @@ public class AdministrativeOfficerController {
     }
 
     @FXML
-    void onUserManagementButtonClicked(ActionEvent event) {
+    void onUserManagementButtonClicked(ActionEvent event) throws IOException {
+        Parent userManagementRoot = FXMLLoader.load(getClass().getResource("/oop/trafficproject/AdminsitrativeOfficer/UserManagementAO.fxml"));
+
+        contentArea.getChildren().setAll(userManagementRoot);
 
     }
 
