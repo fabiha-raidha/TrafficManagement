@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="oop.trafficproject.DataAnalystController.DaDashboardViewController">
+
+<top>
+<VBox spacing="10.0"
+      style="-fx-background-color: linear-gradient(to right, #667eea 0%, #764ba2 100%); -fx-padding: 20;">
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="15.0">
+        <Text fill="WHITE" text="Security Management Dashboard" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="28.0"/>
+            </font>
+        </Text>
+    </HBox>
+
+    <!-- Navigation Buttons -->
+    <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10 0 0 0;">
+        <Button fx:id="alertBtn" mnemonicParsing="false" onAction="#loadAlertView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="🚨 Alerts" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="analyseBtn" mnemonicParsing="false" onAction="#loadAnalyseIncidentView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="🔍 Analyze" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="exportBtn" mnemonicParsing="false" onAction="#loadDataExportView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="📤 Export" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="filterBtn" mnemonicParsing="false" onAction="#loadFilterDataView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="🔧 Filter" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="15.0">
+        <Button fx:id="reportBtn" mnemonicParsing="false" onAction="#loadGenerateReportView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="📊 Reports" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="patrolBtn" mnemonicParsing="false" onAction="#loadPatrolResponseView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="🚔 Patrol" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="realtimeBtn" mnemonicParsing="false" onAction="#loadRealTimeDataView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="📡 Real-time" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+
+        <Button fx:id="shareBtn" mnemonicParsing="false" onAction="#loadShareDataView"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #667eea; -fx-font-weight: bold; -fx-background-radius: 20; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+                text="🔗 Share" minWidth="120" minHeight="40">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Button>
+    </HBox>
+</VBox>
+</top>
+
+<center>
+<!-- Main Content Area with Loading Indicator -->
+<StackPane fx:id="contentArea" style="-fx-background-color: #f8f9fa; -fx-padding: 20;">
+    <!-- Default Welcome Screen -->
+    <VBox fx:id="welcomeScreen" alignment="CENTER" spacing="30.0"
+          style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3); -fx-padding: 50;">
+        <Text fill="#667eea" text="Welcome to Security Management Dashboard" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Text>
+        <Text fill="#6c757d" text="Select a module from the navigation above to get started" textAlignment="CENTER">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Text>
+        <Text fill="#28a745" text="🛡️" textAlignment="CENTER">
+            <font>
+                <Font size="48.0"/>
+            </font>
+        </Text>
+    </VBox>
+
+    <!-- Loading Indicator -->
+    <VBox fx:id="loadingIndicator" alignment="CENTER" spacing="15.0" visible="false"
+          style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 15; -fx-padding: 30;">
+        <ProgressIndicator prefHeight="50.0" prefWidth="50.0" style="-fx-progress-color: #667eea;"/>
+        <Text fill="#667eea" text="Loading..." textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Text>
+    </VBox>
+
+    <!-- Content Container -->
+    <AnchorPane fx:id="dynamicContent" visible="false"
+                style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);"/>
+</StackPane>
+</center>
+
+<bottom>
+<!-- Status Bar with Error Display -->
+<HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #343a40; -fx-padding: 10 20;">
+    <Text fx:id="statusText" fill="WHITE" text="Ready">
+        <font>
+            <Font size="12.0"/>
+        </font>
+    </Text>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Text fill="#6c757d" text="Security Dashboard v1.0">
+        <font>
+            <Font size="10.0"/>
+        </font>
+    </Text>
+</HBox>
+</bottom>
+        </BorderPane>

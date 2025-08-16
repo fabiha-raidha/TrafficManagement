@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.DataAnalystController.PatrolResponseController"
+            prefWidth="1200" prefHeight="780"
+            style="-fx-background-color: linear-gradient(to bottom right,#fffde7,#fff9c4);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#f1c40f,#f39c12); -fx-padding:10;">
+            <Label text="Patrol &amp; Response Analysis"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:16;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                <ComboBox fx:id="zoneCombo" promptText="Zone"/>
+                <Button text="Analyze" fx:id="analyzeBtn"
+                        style="-fx-background-color:#f39c12; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <BarChart fx:id="metricsChart" prefHeight="560">
+                <xAxis>
+                    <CategoryAxis label="Metric"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Value"/>
+                </yAxis>
+            </BarChart>
+
+            <TableView fx:id="metricsTable" prefHeight="160">
+                <columns>
+                    <TableColumn text="Metric" prefWidth="220"/>
+                    <TableColumn text="Value" prefWidth="120"/>
+                    <TableColumn text="Details" prefWidth="420"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

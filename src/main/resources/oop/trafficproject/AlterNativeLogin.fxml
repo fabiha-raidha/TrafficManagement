@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.AlterNativeLoginController">
+   <children>
+      <Button layoutX="32.0" layoutY="55.0" mnemonicParsing="false" onAction="#AdministrativeDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Administrative Officer" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="55.0" mnemonicParsing="false" onAction="#TrafficOperatorDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Traffic Control Operator" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="32.0" layoutY="130.0" mnemonicParsing="false" onAction="#GeneralPublicDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="General Public (Traffic Update)" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="130.0" mnemonicParsing="false" onAction="#ITOfficerDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="IT Officer" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="32.0" layoutY="210.0" mnemonicParsing="false" onAction="#TrafficSergeantDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Traffic Sergeant" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="210.0" mnemonicParsing="false" onAction="#DataAnalystDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Data Analyst" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="32.0" layoutY="292.0" mnemonicParsing="false" onAction="#RoadMaintenanceOfficerDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Road Maintenance Officer" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="292.0" mnemonicParsing="false" onAction="#CitizenReporterDashBoardOnAction" prefHeight="38.0" prefWidth="241.0" style="-fx-background-color: #eeff14;" text="Citizen Reporter (Public User) " wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="17.0" />
+         </font>
+      </Button>
+      <Text fill="#e1ff00" layoutX="104.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In Alternative" textAlignment="CENTER" wrappingWidth="381.74163818359375">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

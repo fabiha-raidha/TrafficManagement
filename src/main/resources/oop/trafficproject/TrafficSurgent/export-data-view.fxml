@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="oop.trafficproject.TrafficSurgent.DataExportController"
+            prefWidth="1200" prefHeight="760"
+            style="-fx-background-color: linear-gradient(to bottom right,#e3f2fd,#bbdefb);">
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right,#1565c0,#1e88e5); -fx-padding:10;">
+            <Label text="Live Camera Feeds"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ComboBox fx:id="cameraCombo" promptText="Select Camera" prefWidth="260"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="12" style="-fx-padding:14;">
+            <StackPane prefHeight="540"
+                       style="-fx-background-color: black; -fx-background-radius: 12; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.3), 24, 0, 0, 8);">
+                <Label text="Live feed will appear here" textFill="white"/>
+            </StackPane>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Play" fx:id="playBtn"/>
+                <Button text="Pause" fx:id="pauseBtn"/>
+                <Button text="Fullscreen" fx:id="fullBtn"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button text="Start Recording" fx:id="startRecBtn" style="-fx-background-color:#c62828; -fx-text-fill:white;"/>
+                <Button text="Stop Recording" fx:id="stopRecBtn"/>
+                <Button text="Capture Snapshot" fx:id="snapshotBtn"/>
+            </HBox>
+
+            <Label fx:id="statusText" textFill="#37474f"/>
+        </VBox>
+    </center>
+</BorderPane>
