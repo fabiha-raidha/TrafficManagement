@@ -23,8 +23,6 @@ public class CitizenReportFeedbackHistoryController
     @javafx.fxml.FXML
     private TableColumn<Report, LocalDate> dateCol_fxid;
     @javafx.fxml.FXML
-    private TextArea feedbackHis_Label_fxid;
-    @javafx.fxml.FXML
     private TableColumn<Report,String> taskIDCol_fxid;
     @javafx.fxml.FXML
     private TableColumn<Report,String> ratingCol_fxid;

@@ -16,96 +16,43 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
-public class CitizenReporterMyReportsController
+public class RoadMainCitizenReportersController
 {
     @javafx.fxml.FXML
-    private TableColumn<Report, String> reportIdCol_fxid;
+    private TableColumn<Report,String> reportIdCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn<Report, LocalDate> submissionDateCol_fxid;
+    private TableColumn<Report, LocalDate>  submissionDateCol_fxid;
     @javafx.fxml.FXML
-    private TextArea myreportMessegeTextAreaFXID;
+    private TableColumn<Report,String>  typeCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn<Report, String> typeCol_fxid;
+    private TableColumn <Report,String> locationCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn<Report, String> locationCol_fxid;
+    private TableView <Report>citizenReportTableView_fxid;
     @javafx.fxml.FXML
-    private TableView<Report> myReportTableView_fxid;
+    private TableColumn <Report,String> currentstatusCol_fxid;
     @javafx.fxml.FXML
-    private TableColumn<Report, String> currentstatusCol_fxid;
+    private TextArea citizenreportMessegeTextAreaFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
-        // String reportID, String status,
-        // String reportType, String location,
-        // String citizenID, String message, LocalDate publicDate
         reportIdCol_fxid.setCellValueFactory(new PropertyValueFactory<>("reportID"));
         submissionDateCol_fxid.setCellValueFactory(new PropertyValueFactory<>("publicDate"));
         typeCol_fxid.setCellValueFactory(new PropertyValueFactory<>("reportType"));
         locationCol_fxid.setCellValueFactory(new PropertyValueFactory<>("location"));
         currentstatusCol_fxid.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-
-
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try{
             fis = new FileInputStream("reports.bin");
             ois =new ObjectInputStream(fis);
             try {
-                myReportTableView_fxid.getItems().clear();
+                citizenReportTableView_fxid.getItems().clear();
 
                 while (true){
                     Report report1 = (Report)ois.readObject();
                     //if (report1.getStatus().equals(comboboxfxid.getValue))
-                    myReportTableView_fxid.getItems().add(report1);
-
-                }
-
-            }catch (EOFException e){}
-
-
-
-        } catch (Exception e){}
-
-
-
-
-
-
-
-    }
-
-
-
-    @Deprecated
-    public void BackToDashboardOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void View_report_OnAction(ActionEvent actionEvent) {
-
-        if (myreportMessegeTextAreaFXID.getText().isEmpty()) {
-
-            Utility.errorMessage01("Input Report ID First");
-            return;
-        }
-
-        FileInputStream fis = null;
-        ObjectInputStream ois = null;
-        try{
-            fis = new FileInputStream("reports.bin");
-            ois =new ObjectInputStream(fis);
-            try {
-                myReportTableView_fxid.getItems().clear();
-                while (true){
-                    Report report1 = (Report)ois.readObject();
-                    //if (report1.getStatus().equals(comboboxfxid.getValue))
-                    if (report1.getReportID().equals(myreportMessegeTextAreaFXID.getText())){
-
-                       myReportTableView_fxid.getItems().add(report1);
-
-
-                    }
+                    citizenReportTableView_fxid.getItems().add(report1);
 
                 }
 
@@ -120,7 +67,7 @@ public class CitizenReporterMyReportsController
 
     @javafx.fxml.FXML
     public void BackToCitizenDashboardOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CitizenReporter-dashboard-01.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMaintenanceOfficer-dashboard-01.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -135,12 +82,12 @@ public class CitizenReporterMyReportsController
             fis = new FileInputStream("reports.bin");
             ois =new ObjectInputStream(fis);
             try {
-                myReportTableView_fxid.getItems().clear();
+                citizenReportTableView_fxid.getItems().clear();
 
                 while (true){
                     Report report1 = (Report)ois.readObject();
                     //if (report1.getStatus().equals(comboboxfxid.getValue))
-                    myReportTableView_fxid.getItems().add(report1);
+                    citizenReportTableView_fxid.getItems().add(report1);
 
                 }
 
@@ -149,6 +96,38 @@ public class CitizenReporterMyReportsController
 
 
         } catch (Exception e){}
+    }
 
+    @javafx.fxml.FXML
+    public void View_Citizenreport_OnAction(ActionEvent actionEvent) {
+        if (citizenreportMessegeTextAreaFXID.getText().isEmpty()){
+
+            Utility.errorMessage01("Input Report ID First");
+            return;
+        }
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try{
+            fis = new FileInputStream("reports.bin");
+            ois =new ObjectInputStream(fis);
+            try {
+                citizenReportTableView_fxid.getItems().clear();
+                while (true){
+                    Report report1 = (Report)ois.readObject();
+                    //if (report1.getStatus().equals(comboboxfxid.getValue))
+                    if (report1.getReportID().equals(citizenreportMessegeTextAreaFXID.getText())){
+
+                        citizenReportTableView_fxid.getItems().add(report1);
+
+
+                    }
+
+                }
+
+            }catch (EOFException e){}
+
+
+
+        } catch (Exception e){}
     }
 }

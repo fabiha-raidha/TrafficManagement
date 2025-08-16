@@ -31,23 +31,48 @@ public class RoadMaintenanceOfficerDashboard01Controller
     }
 
     @javafx.fxml.FXML
-    public void LogDelayOnAction(ActionEvent actionEvent) {
+    public void LogDelayOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-Log_Delay.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void CitizenReportsOnAction(ActionEvent actionEvent) {
+    public void CitizenReportsOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-Citizen_Reporters.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void AssignedZonesOnAction(ActionEvent actionEvent) {
+    public void AssignedZonesOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-AssignedZone.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void DailyLogOnAction(ActionEvent actionEvent) {
+    public void DailyLogOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-DailyLog.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void CitizenFeedbackOnAction(ActionEvent actionEvent) {
+    public void CitizenFeedbackOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-Citizen_Feedback.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @Deprecated
@@ -55,7 +80,12 @@ public class RoadMaintenanceOfficerDashboard01Controller
     }
 
     @javafx.fxml.FXML
-    public void UpdateStatusOnAction(ActionEvent actionEvent) {
+    public void UpdateStatusOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMain-Update_Status.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

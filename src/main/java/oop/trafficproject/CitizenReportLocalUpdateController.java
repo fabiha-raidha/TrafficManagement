@@ -58,6 +58,11 @@ public class CitizenReportLocalUpdateController
 
     @javafx.fxml.FXML
     public void LocalUpdate_view_OnAction(ActionEvent actionEvent) {
+        if (localUpdate_Lable_fxid.getText().isEmpty()) {
+
+            Utility.errorMessage01("Input Report ID First");
+            return;
+        }
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try{

@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -33,6 +34,8 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
     private TableView<Report> checkTaskListTabileView_fxid;
     @javafx.fxml.FXML
     private TableColumn<Report, LocalDate> localDateCol_fxid;
+    @javafx.fxml.FXML
+    private TextArea taskListTextAreaFXID;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -53,6 +56,7 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
             fis = new FileInputStream("reports.bin");
             ois =new ObjectInputStream(fis);
             try {
+                checkTaskListTabileView_fxid.getItems().clear();
 
                 while (true){
                     Report report1 = (Report)ois.readObject();
@@ -72,8 +76,13 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
     }
 
 
-    @javafx.fxml.FXML
-    public void BackToAssignCrewOnAction(ActionEvent actionEvent) {
+    @Deprecated
+    public void BackToAssignCrewOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMaintenanceOfficer-AssignToCrew.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -86,7 +95,74 @@ public class RoadMaintenanceOfficerCheckMaintenanceTaskListController
 
     }
 
+    @Deprecated
+    public void BackToUpdateStatusOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RoadMaintenanceOfficer-dashboard-01.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @Deprecated
+    public void ViewTaskListOnAction(ActionEvent actionEvent) {
+
+    }
+
     @javafx.fxml.FXML
-    public void BackToUpdateStatusOnAction(ActionEvent actionEvent) {
+    public void Refresh_OnAction(ActionEvent actionEvent) {
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try{
+            fis = new FileInputStream("reports.bin");
+            ois =new ObjectInputStream(fis);
+            try {
+                checkTaskListTabileView_fxid.getItems().clear();
+
+                while (true){
+                    Report report1 = (Report)ois.readObject();
+                    //if (report1.getStatus().equals(comboboxfxid.getValue))
+                    checkTaskListTabileView_fxid.getItems().add(report1);
+
+                }
+
+            }catch (EOFException e){}
+
+
+
+        } catch (Exception e){}
+    }
+
+    @javafx.fxml.FXML
+    public void View_TaskListreport_OnAction(ActionEvent actionEvent) {
+        if (taskListTextAreaFXID.getText().isEmpty()){
+
+            Utility.errorMessage01("Input Report ID First");
+            return;
+        }
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try{
+            fis = new FileInputStream("reports.bin");
+            ois =new ObjectInputStream(fis);
+            try {
+                checkTaskListTabileView_fxid.getItems().clear();
+                while (true){
+                    Report report1 = (Report)ois.readObject();
+                    //if (report1.getStatus().equals(comboboxfxid.getValue))
+                    if (report1.getReportID().equals(taskListTextAreaFXID.getText())){
+
+                        checkTaskListTabileView_fxid.getItems().add(report1);
+
+
+                    }
+
+                }
+
+            }catch (EOFException e){}
+
+
+
+        } catch (Exception e){}
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="460.0" prefWidth="663.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.trafficproject.RoadMainDailyLogController">
+   <children>
+      <Button layoutX="43.0" layoutY="279.0" mnemonicParsing="false" onAction="#View_dailyLog_OnAction" prefHeight="26.0" prefWidth="258.0" style="-fx-background-color: #5de189;" text="view" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="11.0" />
+         </font>
+      </Button>
+      <Text fill="#e1ff00" layoutX="253.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Log" textAlignment="CENTER" wrappingWidth="168.1416015625">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="dailyLogTableView_fxid" layoutX="43.0" layoutY="73.0" prefHeight="136.0" prefWidth="577.0">
+         <columns>
+            <TableColumn fx:id="reportIdCol_fxid" prefWidth="75.0" text="Report ID" />
+            <TableColumn fx:id="locationCol_fxid" prefWidth="97.0" text="Location" />
+            <TableColumn fx:id="typeCol_fxid" prefWidth="119.0" text="Type" />
+            <TableColumn fx:id="submissionDateCol_fxid" prefWidth="137.0" text="Submission Date" />
+            <TableColumn fx:id="currentstatusCol_fxid" prefWidth="160.0" text="Current Status" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="myreportMessegeTextAreaFXID" layoutX="221.0" layoutY="222.0" prefHeight="38.0" prefWidth="400.0" />
+      <Button layoutX="456.0" layoutY="406.0" mnemonicParsing="false" onAction="#BackToCitizenDashboardOnAction" prefHeight="26.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="Back To Citizen DashBoard" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="377.0" layoutY="279.0" mnemonicParsing="false" onAction="#Refresh_OnAction" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" text="Refresh" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="11.0" />
+         </font>
+      </Button>
+      <Text fill="#f5d516" layoutX="47.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search With Report ID" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="statusComboBox_fxid" layoutX="43.0" layoutY="332.0" prefWidth="150.0" promptText="Status" />
+      <ComboBox fx:id="taskListComboBox_fxid" layoutX="226.0" layoutY="332.0" prefWidth="150.0" promptText="Task List" />
+      <Button layoutX="43.0" layoutY="379.0" mnemonicParsing="false" onAction="#Submit_report_OnAction" prefHeight="26.0" prefWidth="337.0" style="-fx-background-color: #5de189;" text="Submit" wrapText="true">
+         <font>
+            <Font name="Baloo Bhaijaan Regular" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

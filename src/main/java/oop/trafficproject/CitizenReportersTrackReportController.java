@@ -102,6 +102,16 @@ public class CitizenReportersTrackReportController
     @Deprecated
     public void View_report_OnAction(ActionEvent actionEvent) {
 
+
+    }
+
+    @javafx.fxml.FXML
+    public void Track_report_OnAction(ActionEvent actionEvent) {
+        if (myreportMessegeTextAreaFXID.getText().isEmpty()) {
+
+            Utility.errorMessage01("Input Report ID First");
+            return;
+        }
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try{
@@ -126,9 +136,5 @@ public class CitizenReportersTrackReportController
 
 
         } catch (Exception e){}
-    }
-
-    @javafx.fxml.FXML
-    public void Track_report_OnAction(ActionEvent actionEvent) {
     }
 }
